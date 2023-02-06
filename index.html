@@ -1,0 +1,49 @@
+<!-- Aufgabenstellung
+
+Die Caesar-Verschlüsselung ist ein einfaches symmetrisches Verschlüsselungsverfahren, das auf der monographischen und monoalphabetischen Substitution basiert. Bei der Verschlüsselung wird jeder Buchstabe des Klartexts auf einen Geheimtextbuchstaben abgebildet. Diese Abbildung ergibt sich, indem man die Zeichen eines geordneten Alphabets um eine bestimmte Anzahl zyklisch nach rechts verschiebt (rotiert); zyklisch bedeutet, dass man beim Verschieben über Z hinaus wieder bei A anfangend weiterzählt. Die Anzahl der verschobenen Zeichen bildet den Schlüssel, der für die gesamte Verschlüsselung unverändert bleibt. Beispiel für eine Verschiebung um drei Zeichen.
+
+Beispiel für die Caesar-Verschlüsselung:
+
+Klartext-Alphabet:  a b c d e f g h i j k l m n o p q r s t u v w x y z
+Geheimtextalphabet: D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
+Schlüssel: 3
+
+Bei diesem Beispiel wird das Wort „wikipedia“ als „ZLNLSHGLD“ verschlüsselt.
+ 
+
+Aufgabenstellung
+
+
+Erstelle eine HTML-Seite mit einem Formular, in dem wir zwischen Kodierung und Dekodierung wählen können.
+
+Das Formular hat zwei Eingaben (die Zeichenfolge und den Schlüssel) und eine Ausgabe (das verschlüsselte Ergebnis).
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ceaser Cipher</title>
+	</head>
+	<body>
+		<form onsubmit="return false">
+			<h1>Ceasar Cipher</h1>
+			<!-- * Choose between Encoding and Decrypting -->
+			<input type="radio" name="type" id="decode" />
+			<label for="decode">Decode</label>
+			<input type="radio" name="type" id="encode" />
+			<label for="encode">Encode</label>
+
+			<!-- * Input Field for text to encodde/decode -->
+			<input type="text" name="input" id="input" />
+			<label for="input"></label>
+
+			<!-- * Input Field for text to encodde/decode -->
+			<label for="key"></label>
+			<input type="number" name="key" id="key" />
+		</form>
+	</body>
+</html>
